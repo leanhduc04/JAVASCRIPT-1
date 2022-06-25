@@ -16,16 +16,18 @@ function main() {
 //còn nếu phần từ nào có chiều dài lớn hơn 3 ký tự thì thay thế bằng số 1
 function kiemTra() {
     var arr = ["Hùng", "Duy", "Tuấn", "An", "Hoàng", "Đức"];
-    if (arr<3) {
-        console.log(3);
-    }
-    else if (arr>3)
+
+    if (arr.length<3)
     {
-        console.log(4);
+        arr = 1;
     }
-    else
+    else if (arr.length===3)
     {
-        console.log(5);
+        arr = 0;
+    }
+    else 
+    {
+        arr = -1;
     }
 
     console.log(arr);
