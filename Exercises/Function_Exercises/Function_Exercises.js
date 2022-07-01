@@ -1,20 +1,36 @@
-(function() {
-    random();
-    maxMin();
-})();
+(function () {
+    reverseString();
+})()
 
-function random() {
-    var arr = [32, "abc", true, 65];
-    var random = arr[Math.floor(Math.random() * 4)];
 
-    console.log("Phần Tử Ngẫu Nhiên: " + random);
+// --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Tạo một function nhận vào một chuỗi, trả về kiểu chữ đảo ngược của từng ký tự trong chuỗi đó
+// Đầu vào: “Hello"
+// Trả về: “hELLO"
+
+function reverseString() {
+    var str = 'Hello';
+    var arrs = [];
+    // 1. Tách từng phần tử trong chuỗi thành mảng
+    var arr = str.split('');
+
+    // 2. Đảo ngược phần tử 
+    for (var i of arr) {
+        if (i === i.toLowerCase()) 
+        {
+            var a = i.toUpperCase();
+            arrs.push(a);
+        }
+        else 
+        {
+            var b = i.toLowerCase();
+            arrs.push(b);
+        }
+    }
+
+    var arrs2 = arrs.join('');
+    console.log(arrs2);
 }
 
-function maxMin() {
-    var arr = [1, 3, 2, 8, 4, 5];
-    var largest = Math.max.apply(Math, arr);
-    var small = Math.min.apply(Math, arr);
-    var sum = arr.reduce((reduce, element) => reduce + element);
 
-    console.log("Max: " + largest + " Min: " + small + " Sum: " + sum);
-}
