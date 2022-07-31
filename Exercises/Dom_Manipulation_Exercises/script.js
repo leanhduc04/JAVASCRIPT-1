@@ -3,8 +3,10 @@ function Exercise_01() {
     //   Highlight all of the words over 8 characters long in the paragraph text (with a yellow background for example)
 
     var paragraph = document.querySelector('p')
-    paragraph.innerHTML = paragraph.innerText.split(' ').map(word => word.length > 8 ? '<span style="background:yellow">' + word + '</span>' : word).join(' ')
-
+    paragraph.innerHTML =
+        paragraph.innerText.split(' ')
+            .map(word => word.length > 8 ? '<span style="background:yellow">' + word + '</span>' : word)
+            .join(' ')
     console.log(paragraph);
 }
 
@@ -38,6 +40,7 @@ function Exercise_04() {
 
     var paragraph = document.querySelector('p')
     const wordCount = paragraph.innerText.split(' ').length;
+    console.log(wordCount);
     const wordCountElem = document.createElement('div');
     wordCountElem.innerText = `${wordCount} words`;
     document.body.insertBefore(wordCountElem, paragraph);
@@ -51,6 +54,11 @@ function Exercise_05() {
         .forEach(p => {
             p.innerHTML = p.innerHTML
                 .replace(/\?/g, '🤔')
-                .replace(/\?/g, '😲')
+                .replace(/\!/g, '😲')
         })
 }
+
+var a = 1;
+a = a + 1; 
+a = 1 + 1
+a = 2
